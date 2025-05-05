@@ -2,19 +2,29 @@
   "name": "homem_aranha_2",
   "version": "1.0.0",
   "description": "",
+  "homepage": "https://github.com/eduardoantune12/homem_aranha_2#readme",
+  "bugs": {
+    "url": "https://github.com/eduardoantune12/homem_aranha_2/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eduardoantune12/homem_aranha_2.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
   "main": "gulpfile.js",
   "scripts": {
+    "dev": "gulp watch",
+    "build": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
   "devDependencies": {
     "gulp": "^5.0.0",
     "gulp-imagemin": "^7.1.0",
     "gulp-sass": "^6.0.1",
     "gulp-uglify": "^3.0.2",
+    "gulp-watch": "^5.0.1",
     "sass": "^1.87.0"
   }
 }

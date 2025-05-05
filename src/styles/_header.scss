@@ -32,13 +32,14 @@
     }
 
     &__logo {
-        max-width: 80px;
+        max-width: 320px;
         width: 100%;
         margin: 5px;
         transition: opacity .5s ease;
 
         @media (max-width: 768px) {
-            max-width: 64px;
+            margin-top: 16px;
+            max-width: 140px;
         }
     }
 

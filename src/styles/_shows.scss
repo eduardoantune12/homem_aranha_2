@@ -3,6 +3,7 @@
 .shows {
     padding: 2vw 5.6vw;
     min-height: 50vw;
+    overflow-x: visible;
 
     &__list {
         margin-top: 44px;
@@ -11,7 +12,12 @@
         gap: 24px;
 
         @media (max-width: 768) {
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        &__paragraph {
+            margin-top: 44px;
+            display: none;
         }
 
         &--is-active {
@@ -28,31 +34,32 @@
 
     &__tabs {
         display: flex;
-        justify-content: center;
-
+        justify-content: flex-start;
+        gap: 12px;
+        margin-bottom: 40px;
+    
         @media (max-width: 768px) {
+            overflow-x: auto;
             white-space: nowrap;
-            overflow-x: scroll;
-            padding-left: 20px;
+            padding: 0 16px;
+            -webkit-overflow-scrolling: touch;
+    
+            // Impede que o scroll horizontal afete o layout inteiro
+            width: 100%;
+            box-sizing: border-box;
         }
-
+    
         &__button {
-            color: variaveis.$corTextoSecundario;
-            font-size: 20px;
+            white-space: nowrap;
+            flex-shrink: 0; // Impede que os botões diminuam
+            padding: 12px 24px;
             border: none;
-            background: none;
-            padding-bottom: 5px;
-            text-transform: uppercase;
-            margin: 0 1vw;
-            cursor: pointer;
-            border-bottom: 5px solid transparent;
-
+            background-color: #222;
+            color: white;
+            border-radius: 8px;
+    
             &--is-active {
-                border-bottom: 5px solid variaveis.$corTextoSecundario;
-            }
-
-            @media (max-width: 768px) {
-                font-size: 16px;
+                background-color: #f00;
             }
         }
     }
