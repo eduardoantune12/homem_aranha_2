@@ -11,7 +11,7 @@
         .hero__text {
             flex: 1;
             h3 {
-                font-size: 2rem;
+                font-size: 1.7rem;
                 font-family: webfontpmaa;
             }
         }
@@ -60,7 +60,7 @@
       }
   }
 
-    @media (max-width: 480px) {
+    @media (max-width: 468px) {
 
     .hero__content {
         .hero__image img {
@@ -69,6 +69,7 @@
 
         .hero__text h3 {
             font-size: 1.2rem;
+            font-family: Arial, Helvetica, sans-serif;
         }
     }
 }
