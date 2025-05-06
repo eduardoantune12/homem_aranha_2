@@ -1,7 +1,6 @@
 @use 'hero';
 @use 'variaveis';
 @use 'shows';
-@use 'plans';
 @use 'available-devices';
 @use 'faq';
 @use 'footer';
@@ -14,7 +13,7 @@
 }
 
 @font-face {
-    font-family: Avenir;
+    font-family: webfontpmaa;
     src: url(../../assets/fonts/Mightyspidey-pmaa.ttf);
     font-weight: 700;
 }
@@ -124,7 +123,7 @@ body{
         color: variaveis.$corTextoSecundario;
     
         &:hover {
-            background-color: variaveis.$corDeFundoBotaoSecundario;
+            background-color: variaveis.$corDeFundo;
             color: variaveis.$corTextoSecundario;
             border-color: variaveis.$corDeFundoBotaoSecundario;
         }
@@ -151,6 +150,7 @@ body{
 
         h2 {
             margin-bottom: 24px;
+            font-family: webfontpmaa;
         }
     }
 

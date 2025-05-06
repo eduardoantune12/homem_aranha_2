@@ -1,30 +1,43 @@
 .hero {
-  padding: 5.2vw;
-  min-height: 80vh;
+    padding: 5.2vw;
+    min-height: 90vh;
 
-  .hero__content {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 2rem;
+    .hero__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
 
-      .hero__text {
-          flex: 1;
-          h3 {
-              font-size: 2rem;
-          }
-      }
+        .hero__text {
+            flex: 1;
+            h3 {
+                font-size: 2rem;
+                font-family: webfontpmaa;
+            }
+        }
 
-      .hero__image {
-          flex: 1;
-          img {
-              max-width: 100%;
-              height: auto;
-              display: block;
-              object-fit: contain;
-          }
-      }
-  }
+.hero__image {
+    flex: 1;
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            object-fit: contain;
+
+            mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 0%);
+            -webkit-mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
+            mask-image: linear-gradient(to right, transparent 2%, black 10%, black 80%, transparent 100%),
+            linear-gradient(to bottom, transparent 0%, black 10%, black 80%, transparent 100%);
+            mask-composite: intersect;
+            -webkit-mask-composite: destination-in;
+            mask-repeat: no-repeat;
+            mask-size: cover;
+            -webkit-mask-repeat: no-repeat;
+            -webkit-mask-size: cover;
+            }
+        }
+    }
+}
 
   @media (max-width: 1024px) {
       .hero__content {
@@ -47,17 +60,15 @@
       }
   }
 
-  @media (max-width: 480px) {
-      padding: 4vw;
+    @media (max-width: 480px) {
 
-      .hero__content {
-          .hero__image img {
-              max-width: 90%;
-          }
+    .hero__content {
+        .hero__image img {
+            max-width: 90%;
+        }
 
-          .hero__text h3 {
-              font-size: 1.2rem;
-          }
-      }
-  }
+        .hero__text h3 {
+            font-size: 1.2rem;
+        }
+    }
 }
